@@ -1,0 +1,58 @@
+<html>
+	<head>
+
+		</head>
+	<body>
+
+		<form onsubmit="calculate()">
+			Determination:<input type ="text" id="determination" size="2" maxlength="2" required><br>
+			Level of Discipline:<input type ="text" id="levelOfDiscipline" size="2" maxlength="2" required><br>
+			Motivating:<input type ="text" id="motivating" size="2" maxlength="2" required><br>
+			Fitness:<input type ="text" id="fitness" size="2" maxlength="2" required><br>
+			Goalkeeping:<input type ="text" id="goalkeeping"size="2" maxlength="2"  required><br>
+			Attacking:<input type ="text" id="attacking" size="2" maxlength="2" required><br>
+			Defending:<input type ="text" id="defending" size="2" maxlength="2" required><br>
+			Tactical:<input type ="text" id="tactical"size="2" maxlength="2"  required><br>
+			Technical:<input type ="text" id="technical" size="2" maxlength="2" required><br>
+			Mental:<input type ="text" id="mental"size="2" maxlength="2"  required><br>
+		<input type="submit" name="submit" id="button" value="Submit">
+
+		<button type="button" id="testbutton"> Hello </button>
+
+
+		</form>
+
+
+		<p id="test"></p>
+
+		<script>
+			console.log("working!");
+	var button = document.getElementById("testbutton");
+	if(button) {
+			button.addEventListener("click", calculate);
+	}
+
+
+function calculate() {
+	var determination = document.getElementById("determination").value;
+	var levelOfDiscipline = document.getElementById("levelOfDiscipline").value;
+	var motivating = document.getElementById("motivating").value;
+	var attacking = document.getElementById("attacking").value;
+	var defending = document.getElementById("defending").value;
+	var fitness = document.getElementById("fitness").value;
+	var goalkeeping = document.getElementById("goalkeeping").value;
+	var tactical = document.getElementById("tactical").value;
+	var technical = document.getElementById("technical").value;
+	var mental = document.getElementById("mental").value;
+
+	console.log(determination);
+	document.getElementById("test").innerHTML = determination + " " + levelOfDiscipline;
+	console.log("hello!");
+}
+
+
+
+</script>
+
+	</body>
+</html>
