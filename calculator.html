@@ -4,7 +4,7 @@
 		</head>
 	<body>
 
-		<form onsubmit="calculate()">
+		<form >
 			Determination:<input type ="text" id="determination" size="2" maxlength="2" required><br>
 			Level of Discipline:<input type ="text" id="levelOfDiscipline" size="2" maxlength="2" required><br>
 			Motivating:<input type ="text" id="motivating" size="2" maxlength="2" required><br>
@@ -15,9 +15,7 @@
 			Tactical:<input type ="text" id="tactical"size="2" maxlength="2"  required><br>
 			Technical:<input type ="text" id="technical" size="2" maxlength="2" required><br>
 			Mental:<input type ="text" id="mental"size="2" maxlength="2"  required><br>
-		<input type="submit" name="submit" id="button" value="Submit">
-
-		<button type="button" id="testbutton"> Hello </button>
+			<button type="button" id="testbutton"> Submit </button>
 
 
 		</form>
@@ -26,7 +24,6 @@
 		<p id="results"></p>
 
 		<script>
-			console.log("working!");
 	var button = document.getElementById("testbutton");
 	if(button) {
 			button.addEventListener("click", calculate);
@@ -88,7 +85,6 @@ var tacticsvalue = (tactical * 2) + (determination + levelOfDiscipline + motivat
 		fitStars = 5;
 	}
 
-	console.log(fitStars);
 
 	var keepStars = "";
 	if (keepingvalue < 39) {
@@ -228,8 +224,8 @@ var tacticsvalue = (tactical * 2) + (determination + levelOfDiscipline + motivat
 	}
 
 
-document.getElementById("results").innerHTML = fitStars + "</br>" + keepStars + "</br>" + attackStars + "</br>" + 
-												defStars + "</br>" + techStars + "</br>" + shootStars + "</br>" + tactStars;
+document.getElementById("results").innerHTML = "Fitness:" + fitStars + "</br>" + "Goalkeeping:" + keepStars + "</br>" + "Attacking" + attackStars + "</br>" + 
+												"Defending:" + defStars + "</br>" + "Ball Control:"+ techStars + "</br>" + "Shooting:"+ shootStars + "</br>" + "Tactical:" +tactStars;
 
 
 
